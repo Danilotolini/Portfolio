@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); 
+body {
+  background: #e0e5ec;
+}
+*{ 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    text-decoration: none; 
+    list-style: none; 
+    font-family: "Poppins", sans-serif; 
+} 
+
+body { 
+    
+} 
+
+header { 
+display: flex; 
+justify-content: space-around; 
+max-width: 100%; 
+align-items: center; 
+text-align: center; 
+padding-top: 1rem;    
+} 
+
+.cabecalho-link {
+  display: flex;
+  gap: 3rem;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.cabecalho-link a {
+  color: rgb(0, 0, 0);
+  font-size: 12px;
+  text-decoration: none; /* Adicionado para remover sublinhado, opcional */
+  transition: color 0.3s ease; /* Transição movida para o estado normal */
+}
+
+.cabecalho-link a:hover {
+  color: rgb(0, 128, 255);
+}
+
+
+.logo { 
+    height: 40px; 
+    width: 40px; 
+    background: transparent; 
+    border: 2px solid rgba(2,126,251,1); 
+    color: rgba(2,126,251,1); 
+    border-radius: 50%; 
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-size: 15px; 
+    cursor: pointer;
+} 
+
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+.btn-3 {
+  background: rgb(0,172,238);
+background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  
+}
+.btn-3 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-3:before,
+.btn-3:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+   background: rgba(2,126,251,1);
+  transition: all 0.3s ease;
+}
+.btn-3:before {
+  height: 0%;
+  width: 2px;
+}
+.btn-3:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-3:hover{
+   background: transparent;
+  box-shadow: none;
+}
+.btn-3:hover:before {
+  height: 100%;
+}
+.btn-3:hover:after {
+  width: 100%;
+}
+.btn-3 span:hover{
+   color: rgba(2,126,251,1);
+}
+.btn-3 span:before,
+.btn-3 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+   background: rgba(2,126,251,1);
+  transition: all 0.3s ease;
+}
+.btn-3 span:before {
+  width: 2px;
+  height: 0%;
+}
+.btn-3 span:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-3 span:hover:before {
+  height: 100%;
+}
+.btn-3 span:hover:after {
+  width: 100%;
+}
