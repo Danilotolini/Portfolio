@@ -1,186 +1,325 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
 body {
-  background: #e0e5ec;
+    background: #e0e5ec; /* Cor de fundo da página */
+    padding-top: 80px; /* Espaço superior para evitar sobreposição do header fixo */
 }
-*{ 
-    margin: 0; 
-    padding: 0; 
-    box-sizing: border-box; 
-    text-decoration: none; 
-    list-style: none; 
-    font-family: "Poppins", sans-serif; 
-} 
 
-body { 
-    
-} 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+}
 
-header { 
-display: flex; 
-justify-content: space-around; 
-max-width: 100%; 
-align-items: center; 
-text-align: center; 
-padding-top: 1rem;    
-} 
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem 0;
+    background-color: transparent; /* Fundo inicial transparente */
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: background-color 0.3s ease-in-out;
+}
+
+header.scrolled {
+    background-color: #e9ecf0; /* Fundo que aparece após rolar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacar o header */
+}
 
 .cabecalho-link {
-  display: flex;
-  gap: 3rem;
-  font-weight: 300;
-  cursor: pointer;
+    display: flex;
+    gap: 3rem;
+    font-weight: 300;
+    cursor: pointer;
 }
 
 .cabecalho-link a {
-  color: rgb(0, 0, 0);
-  font-size: 12px;
-  text-decoration: none; /* Adicionado para remover sublinhado, opcional */
-  transition: color 0.3s ease; /* Transição movida para o estado normal */
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .cabecalho-link a:hover {
-  color: rgb(0, 128, 255);
+    color: rgb(0, 128, 255);
 }
 
-
-.logo { 
-    height: 40px; 
-    width: 40px; 
-    background: transparent; 
-    border: 2px solid rgba(2,126,251,1); 
-    color: rgba(2,126,251,1); 
-    border-radius: 50%; 
-    display: inline-flex; 
-    align-items: center; 
-    justify-content: center; 
-    font-size: 15px; 
+.logo {
+    height: 40px;
+    width: 40px;
+    background: transparent;
+    border: 2px solid rgba(2,126,251,1);
+    color: rgba(2,126,251,1);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
     cursor: pointer;
-} 
+}
 
 .custom-btn {
-  width: 130px;
-  height: 40px;
-  color: #ffffff;
-  border-radius: 5px;
-  padding: 10px 25px;
-  font-family: 'Lato', sans-serif;
-  font-weight: 500;
-  background: transparent;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  display: inline-block;
-   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-   7px 7px 20px 0px rgba(0,0,0,.1),
-   4px 4px 5px 0px rgba(0,0,0,.1);
-  outline: none; 
+    width: 130px;
+    height: 40px;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5),
+                7px 7px 20px 0px rgba(0,0,0,.1),
+                4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+    margin-top: -6%;
 }
+
 .btn-3 {
-  background: rgb(0,172,238);
-background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
-  width: 130px;
-  height: 40px;
-  line-height: 42px;
-  padding: 0;
-  border: none;
-  
+    background: rgb(0,172,238);
+    background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
 }
+
 .btn-3 span {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 100%; 
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
 }
+
 .btn-3:before,
 .btn-3:after {
-  position: absolute;
-  content: "";
-  right: 0;
-  top: 0;
-   background: rgba(2,126,251,1);
-  transition: all 0.3s ease;
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+    background: rgba(2,126,251,1);
+    transition: all 0.3s ease;
 }
+
 .btn-3:before {
-  height: 0%;
-  width: 2px;
+    height: 0%;
+    width: 2px;
 }
+
 .btn-3:after {
-  width: 0%;
-  height: 2px;
+    width: 0%;
+    height: 2px;
 }
-.btn-3:hover{
-   background: transparent;
-  box-shadow: none;
+
+.btn-3:hover {
+    background: transparent;
+    box-shadow: none;
 }
+
 .btn-3:hover:before {
-  height: 100%;
+    height: 100%;
 }
+
 .btn-3:hover:after {
-  width: 100%;
+    width: 100%;
 }
-.btn-3 span:hover{
-   color: rgba(2,126,251,1);
+
+.btn-3 span:hover {
+    color: rgba(2,126,251,1);
 }
+
 .btn-3 span:before,
 .btn-3 span:after {
-  position: absolute;
-  content: "";
-  left: 0;
-  bottom: 0;
-   background: rgba(2,126,251,1);
-  transition: all 0.3s ease; 
-  
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    background: rgba(2,126,251,1);
+    transition: all 0.3s ease;
 }
+
 .btn-3 span:before {
-  width: 2px;
-  height: 0%;
+    width: 2px;
+    height: 0%;
 }
+
 .btn-3 span:after {
-  width: 0%;
-  height: 2px;
+    width: 0%;
+    height: 2px;
 }
+
 .btn-3 span:hover:before {
-  height: 100%;
+    height: 100%;
 }
+
 .btn-3 span:hover:after {
-  width: 100%;
+    width: 100%;
 }
-/*FIM DO BUTTON*/ 
-.container-text { 
-  padding: 150px 0 0 130px;
-}  
 
-.text h3{ 
-  font-size: 16px;
-} 
-.text h1 {  
-  color: rgba(2,126,251,1)
-}  
-.text p { 
-  font-size: 10px; 
-  font-weight: 300; 
-  margin-top: 10px;
-} 
+/* FIM DO BUTTON */
 
-.redes-sociais a{ 
-  color: rgba(2,126,251,1); 
-  padding: 3px; 
-  margin-top: 5px;
-} 
-.btn-sobremim { 
-  margin-top: 10px;
-} 
+.container-text {
+    padding: 150px 0 0 130px;
+}
+
+.text h3 {
+    font-size: 22px;
+}
+
+.text h1 {
+    font-size: 40px;
+    color: rgba(2,126,251,1);
+}
+
+.text p {
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+.redes-sociais a {
+    color: rgba(2,126,251,1);
+    padding: 3px;
+    margin-top: 5px;
+}
+
+.btn-sobremim {
+    margin-top: 24px;
+}
+
 /* Estilo inicial dos ícones de redes sociais */
 .redes-sociais {
-  font-size: 150%; /* Tamanho inicial dos ícones */
-  transition: transform 0.3s ease; /* Transição suave para a transformação */
+    font-size: 150%;
+    transition: transform 0.3s ease;
 }
 
-/* Estilo ao passar o cursor por cima */
 .fa-linkedin:hover {
-  font-size: 140%;
-} 
-.fa-github:hover {
-  font-size: 140%;
-} 
+    font-size: 140%;
+}
 
+.fa-github:hover {
+    font-size: 140%;
+}
+
+/* Esconde o menu móvel por padrão */
+.menu-mobile {
+    display: none;
+}
+
+/* Estilos para a seção "About Me" */
+.about-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 80vh;
+  padding: 50px;
+  margin-top: 40vh; /* Adiciona um espaçamento superior */
+  /* O margin-top pode ser ajustado conforme necessário para mover a seção mais para baixo */
+  margin-left: 20vh;
+}
+
+.section-about {
+  width: 40%; /* Ocupa 50% da largura da tela */
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(2, 126, 251, 0.367);
+  margin-left: 0; /* Alinha à esquerda */
+  margin-right: auto; /* Garante que a margem direita não ocupe espaço */
+  /* Adicionado margin-left e margin-right para alinhamento à esquerda */
+}
+
+.section-about h2 {
+  font-size: 28px;
+  color: rgba(2,126,251,1);
+  margin-bottom: 20px;
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+.section-about p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+  text-align: left; /* Alinha o texto à esquerda */
+}
+.image-container {
+  width: 30%; /* Ajusta a largura da imagem */
+  height: 75%; /* Altura da imagem */
+  overflow: hidden; /* Garante que a imagem seja cortada */
+  display: flex;
+  justify-content: flex-start; /* Alinha a imagem à esquerda */
+  align-items: center;
+  box-shadow: 0 0 15px rgba(2, 126, 251, 0.614); /* Sombra azul ao redor da imagem */
+  border-radius: 10px; /* Bordas arredondadas */ 
+  margin-right: auto; /* Garante que a margem direita não ocupe espaço */
+}
+
+.image-container img {
+  width: 100%; /* Largura completa da imagem */
+  height: 100%; /* Altura completa da imagem */
+  object-fit: cover; /* Garante que a imagem seja cortada */
+  border-radius: 10px; /* Bordas arredondadas */
+}
+/* Exibe o menu móvel em telas pequenas */
+@media screen and (max-width: 600px) {
+    .cabecalho-link {
+        display: none;
+    }
+
+    .menu-mobile {
+        display: block;
+    }
+
+    .bars {
+        cursor: pointer;
+        font-size: 24px;
+        margin: 10px;
+    }
+
+    .btn-menu {
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        position: absolute;
+        top: 50px;
+        right: 10px;
+        z-index: 1000;
+        width: 200px;
+    }
+
+    .btn-menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .btn-menu li {
+        margin: 10px 0;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .btn-menu a {
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+        display: block;
+    }
+
+    /* Quando o menu está ativo */
+    .menu-mobile.active .btn-menu {
+        display: flex;
+        transition: all 0.3s ease-in-out;
+    }
+}
