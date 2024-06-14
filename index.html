@@ -14,36 +14,55 @@
                 <i class="fa-solid fa-d"></i>
             </div><!--Logo--> 
             <div class="cabecalho-link">
-                 <li> 
-                    <a href="#">Home</a>
-                 </li> 
-                 <li> 
-                    <a href="#">About me</a>
-                 </li> 
-                 <li> 
-                    <a href="#">Services</a>
-                 </li> 
-                 <li> 
-                    <a href="#">Projects</a>
-                 </li> 
-                 <button class="custom-btn btn-3"><span>CONTATE-ME</span></button>
+                <li><a href="#home">Home</a></li> 
+                <li><a href="#about-me">About me</a></li> 
+                <li><a href="#projects">Projects</a></li> 
+                <li><a href="#Skills">Skills</a></li>  
+                <a href="https://api.whatsapp.com/send/?phone=5511967884852&text&type=phone_number&app_absent=0">
+                    <button class="custom-btn btn-3"><span>CONTACT ME</span></button></a>
+            </div> 
+            <div class="menu-mobile">
+                <div class="bars"><i class="fa-solid fa-bars"></i>
+                    <div class="btn-menu"> 
+                        <li><a href="#home">Home</a></li> 
+                        <li><a href="#about-me">About me</a></li> 
+                        <li><a href="#projects">Projects</a></li> 
+                        <li><a href="#Skills">Skills</a></li> 
+                        
+                    </div>
+                </div>
             </div>
         </header> 
 
-        <div class="container-text">
+        <div class="container-text" id="home">
             <div class="text">
-            <h3>Hello. I'm</h3> 
-            <h1>Danilo dos Santos Tolini Martins</h1>  
-            <p>Computer Science student</p>
-            <div class="redes-sociais"> 
-                <a href="https://www.linkedin.com/in/danilo-dos-santos-tolini-martins/"><i class="fa-brands fa-linkedin"></i></a> 
-                <a href="https://github.com/Danilotolini"><i class="fa-brands fa-github"></i></a>
-            </div><!--REDES SOCIAIS-->   
-            <div class="btn-sobremim">
-            <button class="custom-btn btn-3"><span>Sobre mim</span></button>
+                <h3>Hello. I'm</h3> 
+                <h1>Danilo dos Santos Tolini Martins</h1>  
+                <p>Computer Science student</p>
+                <div class="redes-sociais"> 
+                    <a href="https://www.linkedin.com/in/danilo-dos-santos-tolini-martins/"><i class="fa-brands fa-linkedin"></i></a> 
+                    <a href="https://github.com/Danilotolini"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <div class="btn-sobremim"> 
+                    <a href="#about-me">
+                    <button class="custom-btn btn-3"><span>About me</span></button></a>
+                </div>
+            </div>
         </div>
-    </div> 
+    </div><!--Background-->  
+
+    <!-- Nova seção "About Me" abaixo -->
+    <div class="about-container">
+        <div id="about-me" class="section-about">
+            <h2>About Me</h2>
+            <p>Hello, my name is Danilo. I am a Computer Science student at São Judas Tadeu University and currently pursuing a Java Programming course at Impacta College. Additionally, I am studying English at Cultura Inglesa to enhance my global communication skills.</p>
+            <p>I have a strong interest and passion for software development. I am always eager to learn new skills and apply them to practical projects. My goal is to contribute to technological advancements by offering creative and efficient solutions. I am seeking opportunities to expand my knowledge and be part of collaborative teams.</p>
+        </div> 
+        <div class="image-container"> 
+        <img src="https://i.ibb.co/kxXs74Q/eu2.jpg" alt="eu2" border="0">
+        </div>
     </div>
-    </div><!--Background--> 
+
+    <script src="script.js"></script>
 </body>
-</html> 
+</html>
