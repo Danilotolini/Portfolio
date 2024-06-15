@@ -2,66 +2,141 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Danilo dos Santos Tolini Martins</title>
 </head>
 <body>
-    <div class="background"> 
-        <header> 
+    <div class="background">
+        <header>
             <div class="logo"> 
-                <i class="fa-solid fa-d"></i>
-            </div><!--Logo--> 
+                <span class="logo-icon"><i class="fas fa-code"></i></span>
+                <span class="logo-text">Danilo</span>
+            </div>
             <div class="cabecalho-link">
-                <li><a href="#home">Home</a></li> 
-                <li><a href="#about-me">About me</a></li> 
-                <li><a href="#projects">Projects</a></li> 
-                <li><a href="#Skills">Skills</a></li>  
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about-me">About me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#Skills">Skills</a></li>
                 <a href="https://api.whatsapp.com/send/?phone=5511967884852&text&type=phone_number&app_absent=0">
                     <button class="custom-btn btn-3"><span>CONTACT ME</span></button></a>
-            </div> 
+            </div>
             <div class="menu-mobile">
                 <div class="bars"><i class="fa-solid fa-bars"></i>
-                    <div class="btn-menu"> 
-                        <li><a href="#home">Home</a></li> 
-                        <li><a href="#about-me">About me</a></li> 
-                        <li><a href="#projects">Projects</a></li> 
-                        <li><a href="#Skills">Skills</a></li> 
-                        
+                    <div class="btn-menu">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about-me">About me</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#Skills">Skills</a></li>
                     </div>
                 </div>
             </div>
-        </header> 
+        </header>
 
         <div class="container-text" id="home">
             <div class="text">
-                <h3>Hello. I'm</h3> 
-                <h1>Danilo dos Santos Tolini Martins</h1>  
+                <h3>Hello. I'm</h3>
+                <h1>Danilo dos Santos Tolini Martins</h1>
                 <p>Computer Science student</p>
-                <div class="redes-sociais"> 
-                    <a href="https://www.linkedin.com/in/danilo-dos-santos-tolini-martins/"><i class="fa-brands fa-linkedin"></i></a> 
+                <div class="redes-sociais">
+                    <a href="https://www.linkedin.com/in/danilo-dos-santos-tolini-martins/"><i class="fa-brands fa-linkedin"></i></a>
                     <a href="https://github.com/Danilotolini"><i class="fa-brands fa-github"></i></a>
                 </div>
-                <div class="btn-sobremim"> 
+                <div class="btn-sobremim">
                     <a href="#about-me">
                     <button class="custom-btn btn-3"><span>About me</span></button></a>
                 </div>
             </div>
         </div>
-    </div><!--Background-->  
-
-    <!-- Nova seção "About Me" abaixo -->
-    <div class="about-container">
-        <div id="about-me" class="section-about">
+    </div>
+    <div id="about-me">
+    <div class="about-container" >
+        <div  class="section-about">
             <h2>About Me</h2>
             <p>Hello, my name is Danilo. I am a Computer Science student at São Judas Tadeu University and currently pursuing a Java Programming course at Impacta College. Additionally, I am studying English at Cultura Inglesa to enhance my global communication skills.</p>
             <p>I have a strong interest and passion for software development. I am always eager to learn new skills and apply them to practical projects. My goal is to contribute to technological advancements by offering creative and efficient solutions. I am seeking opportunities to expand my knowledge and be part of collaborative teams.</p>
+        </div>
+        <div class="image-container">
+        <img src="https://i.ibb.co/cNNW3GS/Whats-App-Image-2024-06-14-at-17-00-41-15af8005.jpg" alt="Whats-App-Image-2024-06-14-at-17-00-41-15af8005" border="0">
+        </div>
+    </div></div>
+
+    <div class="projects-container" id="projects">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <div class="project-item">
+                <img class="project-image" src="https://i.ibb.co/JcK3j2t/hotel2.png" alt="Descrição da Imagem">
+                <div class="project-title">Hotel Santos Beachfront</div>
+                <p class="project-description">"Hotel Santos Beachfront" is a dynamic website built with HTML, CSS, and JavaScript, designed for a fictional hotel. It features user login functionality, detailed room and amenities information, leisure options, and a contact form for reservations and inquiries.</p>
+                <a class="project-link" href="https://github.com/Danilotolini/Hotel-Santos-Beachfront">GitHub Repository</a>
+            </div>
+            <!-- Outros projetos aqui --> 
+            <div class="project-item">
+                <img class="project-image" src="https://i.ibb.co/jWC1tZZ/calculadora.png" alt="Projeto 2">
+                <h3 class="project-title">Calculadora</h3>
+                <p class="project-description">This project showcases a simple calculator built using HTML, CSS, and JavaScript. The design is functional and responsive, ensuring a consistent user experience across different devices.</p>
+                <a class="project-link" href="https://github.com/Danilotolini/Calculadora.git">GitHub Repository</a>
+            </div>
         </div> 
-        <div class="image-container"> 
-        <img src="https://i.ibb.co/kxXs74Q/eu2.jpg" alt="eu2" border="0">
+    </div> 
+    
+    <div class="skills-container" id="Skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-item">
+                <i class="fab fa-java"></i>
+                <p>Java</p>
+            </div>
+            <div class="skill-item">
+                <i class="fab fa-aws"></i>
+                <p>AWS</p>
+            </div>
+            <div class="skill-item">
+                <i class="fas fa-database"></i>
+                <p>SQL</p>
+            </div>
+            <div class="skill-item">
+                <i class="fab fa-js"></i>
+                <p>JavaScript</p>
+            </div>
+            <div class="skill-item">
+                <i class="fab fa-node"></i>
+                <p>Node.js</p>
+            </div>
+            <div class="skill-item">
+                <i class="fab fa-python"></i>
+                <p>Python</p>
+            </div>
+            <div class="skill-item">
+                <i class="fab fa-html5"></i>
+                <p>HTML</p>
+            </div>
+            <div class="skill-item">
+                <i class="fab fa-css3-alt"></i>
+                <p>CSS</p>
+            </div>
+            <div class="skill-item">
+                <i class="fab fa-bootstrap"></i>
+                <p>Bootstrap</p>
+            </div>
+            <div class="skill-item">
+                <i class="fab fa-react"></i>
+                <p>React</p>
+            </div>
+            </div>
+        </div>
+    </div> 
+    <div class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Danilo dos Santos Tolini Martins. Todos os direitos reservados.</p>
+            <div class="redes-sociais-footer">
+                <a href="https://www.linkedin.com/in/danilo-dos-santos-tolini-martins/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Danilotolini" target="_blank"><i class="fa-brands fa-github"></i></a>
+            </div>
         </div>
     </div>
+    
 
     <script src="script.js"></script>
 </body>
