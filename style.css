@@ -20,7 +20,7 @@ header {
     width: 100%;
     padding: 1rem 0;
     background-color: transparent; /* Fundo inicial transparente */
-    z-index: 1000;
+    z-index: 10000;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -492,48 +492,89 @@ header.scrolled {
         display: block;
     }
 
-    .bars {
-        cursor: pointer;
-        font-size: 24px;
-        margin: 10px;
-    }
+   /* Estilos do ícone de barras */
+   .bars, .close-button {
+    font-size: 24px;
+    cursor: pointer;
+    color: #000; /* Ajuste a cor do ícone conforme necessário */
+    z-index: 1002; /* Garante que o ícone esteja acima do menu */
+}
 
-    .btn-menu {
-        display: none;
-        flex-direction: column;
-        background-color: #fff;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        position: absolute;
-        top: 50px;
-        right: 10px;
-        z-index: 1000;
-        width: 200px;
-    }
+/* Estilos do menu quando está ativo */
+.menu-mobile.active .btn-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50px; /* Deixa a área superior do cabeçalho visível */
+    left: 0;
+    width: 100%;
+    height: calc(100% - 50px); /* Reduz a altura do menu para não cobrir o cabeçalho */
+    background-color: rgba(255, 255, 255, 0.95); /* Fundo levemente translúcido */
+    z-index: 1000; /* Garante que o menu esteja abaixo do cabeçalho */
+    transition: opacity 0.3s ease-in-out; /* Transição suave ao abrir e fechar */
+    opacity: 1;
+}
 
-    .btn-menu ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-    }
+/* Esconde o menu por padrão */
+.menu-mobile .btn-menu {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out; /* Transição suave ao abrir e fechar */
+}
 
-    .btn-menu li {
-        margin: 10px 0;
-        padding: 10px;
-        border-bottom: 1px solid #ddd;
-    }
+/* Esconde o botão de fechar por padrão */
+.close-button {
+    display: none; 
+    
+}
 
-    .btn-menu a {
-        text-decoration: none;
-        color: #000;
-        font-weight: bold;
-        display: block;
-    }
+/* Estilos dos itens do menu */
+.btn-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Faz os itens ocuparem a largura completa */
+    text-align: center; /* Centraliza o texto */
+}
 
-    /* Quando o menu está ativo */
-    .menu-mobile.active .btn-menu {
-        display: flex;
-        transition: all 0.3s ease-in-out;
-    }  
+.btn-menu li {
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd; /* Linha de separação entre itens */
+}
+
+.btn-menu li:last-child {
+    border-bottom: none; /* Remove a linha do último item */
+}
+
+.btn-menu a {
+    display: block; /* Faz com que o link ocupe toda a área do item */
+    color: #000; /* Cor do texto dos links */
+    text-decoration: none; /* Remove sublinhado dos links */
+    font-size: 24px; /* Aumenta o tamanho da fonte */
+    font-weight: bold; /* Negrito */
+}
+
+.btn-menu a:hover {
+    background-color: rgba(2,126,251,0.1); /* Fundo azul claro ao passar o mouse */
+    color: rgba(2,126,251,1); /* Cor do texto ao passar o mouse */
+    border-radius: 4px; /* Bordas arredondadas ao passar o mouse */
+    padding-left: 15px; /* Adiciona espaço à esquerda ao passar o mouse */
+    transition: all 0.2s ease-in-out; /* Transição suave */
+}
+
+/* Estilos quando o menu está ativo */
+.menu-mobile.active .bars {
+    display: none; /* Esconde o botão de abrir quando o menu está ativo */
+}
+
+.menu-mobile.active .close-button {
+    display: block; /* Exibe o botão de fechar quando o menu está ativo */
+    position: fixed;
+    top: 10px;
+    right: 20px;
+}
     .about-container {
         display: flex;
         justify-content: center;
