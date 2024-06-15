@@ -510,7 +510,7 @@ header.scrolled {
     z-index: 1002; /* Ícone acima do menu */
     position: fixed; /* Fixa posição */
     top: 2.6%; /* Distância do topo */
-    left: 60%; /* Centraliza horizontalmente */
+    left: 70%; /* Centraliza horizontalmente */
     transform: translateX(40px); /* Ajusta ligeiramente à direita */
     transition: none; /* Remove transições desnecessárias */
 }
@@ -523,7 +523,7 @@ header.scrolled {
     z-index: 1002; /* Ícone acima do menu */
     position: fixed; /* Fixa posição */
     top: 2.1%; /* Distância do topo */
-    left: 59%; /* Centraliza horizontalmente */
+    left: 69%; /* Centraliza horizontalmente */
     transform: translateX(40px); /* Mesma posição do botão de abrir */
     display: none; /* Esconde por padrão */
     transition: color 0.2s ease, font-size 0.2s ease; /* Adiciona transição */
