@@ -25,7 +25,6 @@ header {
     justify-content: space-around;
     align-items: center;
     transition: background-color 0.3s ease-in-out; 
-    left: 5%;
 }
 
 header.scrolled {
@@ -37,7 +36,8 @@ header.scrolled {
     display: flex;
     gap: 3rem;
     font-weight: 300;
-    cursor: pointer;
+    cursor: pointer; 
+    padding-top: 0.5%;
 }
 
 .cabecalho-link a {
@@ -60,7 +60,8 @@ header.scrolled {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
+    cursor: pointer; 
+    width: 30%;
 }
 
 .logo .logo-text {
@@ -96,7 +97,8 @@ header.scrolled {
     line-height: 42px;
     padding: 0;
     border: none; 
-    font-size: medium;
+    font-size: medium; 
+    top: -10%;
 }
 
 .btn-3 span {
