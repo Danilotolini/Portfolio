@@ -1,6 +1,26 @@
-document.querySelector('.bars').addEventListener('click', function() {
-    document.querySelector('.menu-mobile').classList.toggle('active');
-  }); 
+document.addEventListener("DOMContentLoaded", function() {
+    const bars = document.querySelector('.bars');
+    const menu = document.querySelector('.menu-mobile');
+    const closeButton = document.querySelector('.close-button');
+    const menuLinks = document.querySelectorAll('.btn-menu a');
+
+    bars.addEventListener('click', function() {
+        menu.classList.toggle('active');
+        document.body.style.overflow = 'hidden'; // Impede o scroll do corpo da página
+    });
+
+    closeButton.addEventListener('click', function() {
+        menu.classList.remove('active');
+        document.body.style.overflow = ''; // Restaura o scroll do corpo da página
+    });
+
+    menuLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            menu.classList.remove('active');
+            document.body.style.overflow = ''; // Restaura o scroll do corpo da página
+        });
+    });
+});
     // Função para alterar a classe do header ao rolar a página
     function onScroll() {
         // Obtém o elemento do header
@@ -37,4 +57,5 @@ document.querySelector('.bars').addEventListener('click', function() {
             }
         });
     });
+    
     
