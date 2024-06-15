@@ -20,11 +20,12 @@ header {
     width: 100%;
     padding: 1rem 0;
     background-color: transparent; /* Fundo inicial transparente */
-    z-index: 10000;
+    z-index: 1000;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out; 
+    left: 5%;
 }
 
 header.scrolled {
@@ -41,7 +42,7 @@ header.scrolled {
 
 .cabecalho-link a {
     color: rgb(0, 0, 0);
-    font-size: 20px;
+    font-size: 22px;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -54,12 +55,12 @@ header.scrolled {
     height: 40px;
     background: transparent;
     color: rgba(2,126,251,1); /* Cor azul para o "D" */
-    font-size: 28px; /* Tamanho do texto da logo */
+    font-size: 30px; /* Tamanho do texto da logo */
     font-weight: bold; /* Negrito para destaque */
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer; 
+    cursor: pointer;
 }
 
 .logo .logo-text {
@@ -411,7 +412,7 @@ header.scrolled {
 
 .redes-sociais-footer a:hover {
     color: #027efb; /* Cor ao passar o mouse */
-} 
+}
 @media screen and (max-width: 1490px) { 
     .redes-sociais {
         font-size: 200%;
@@ -483,7 +484,12 @@ header.scrolled {
         border-radius: 10px; /* Bordas arredondadas */
     }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) { 
+    .container-text {
+        padding: 150px 0 0 90px; 
+        
+    }
+    
     .cabecalho-link {
         display: none;
     }
@@ -493,27 +499,47 @@ header.scrolled {
     }
 
    /* Estilos do ícone de barras */
-   .bars, .close-button {
-    font-size: 24px;
+/* Estilos do ícone de abrir menu (barras) */
+/* Estilos do ícone de abrir menu (barras) */
+.bars {
+    font-size: 27px;
     cursor: pointer;
-    color: #000; /* Ajuste a cor do ícone conforme necessário */
-    z-index: 1002; /* Garante que o ícone esteja acima do menu */
+    color: #000; /* Cor do ícone */
+    z-index: 1002; /* Ícone acima do menu */
+    position: fixed; /* Fixa posição */
+    top: 2.6%; /* Distância do topo */
+    left: 60%; /* Centraliza horizontalmente */
+    transform: translateX(40px); /* Ajusta ligeiramente à direita */
+    transition: none; /* Remove transições desnecessárias */
 }
 
-/* Estilos do menu quando está ativo */
+/* Estilos do botão de fechar menu */
+.close-button { 
+    font-size: 30px; 
+    cursor: pointer;
+    color: #000; /* Cor do ícone */
+    z-index: 1002; /* Ícone acima do menu */
+    position: fixed; /* Fixa posição */
+    top: 2.1%; /* Distância do topo */
+    left: 59%; /* Centraliza horizontalmente */
+    transform: translateX(40px); /* Mesma posição do botão de abrir */
+    display: none; /* Esconde por padrão */
+    transition: color 0.2s ease, font-size 0.2s ease; /* Adiciona transição */
+}
+
 .menu-mobile.active .btn-menu {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: fixed;
-    top: 50px; /* Deixa a área superior do cabeçalho visível */
+    top: 70px; /* Mantém o cabeçalho visível */
     left: 0;
     width: 100%;
-    height: calc(100% - 50px); /* Reduz a altura do menu para não cobrir o cabeçalho */
-    background-color: rgba(255, 255, 255, 0.95); /* Fundo levemente translúcido */
-    z-index: 1000; /* Garante que o menu esteja abaixo do cabeçalho */
-    transition: opacity 0.3s ease-in-out; /* Transição suave ao abrir e fechar */
+    height: calc(100% - 70px); /* Ajusta altura para evitar cobertura */
+    background-color: #ffffff; /* Fundo branco */
+    z-index: 1000; /* Menu abaixo do cabeçalho */
+    transition: opacity 0.3s ease-in-out; /* Transição suave */
     opacity: 1;
 }
 
@@ -521,13 +547,7 @@ header.scrolled {
 .menu-mobile .btn-menu {
     display: none;
     opacity: 0;
-    transition: opacity 0.3s ease-in-out; /* Transição suave ao abrir e fechar */
-}
-
-/* Esconde o botão de fechar por padrão */
-.close-button {
-    display: none; 
-    
+    transition: opacity 0.3s ease-in-out; /* Transição suave */
 }
 
 /* Estilos dos itens do menu */
@@ -535,46 +555,45 @@ header.scrolled {
     list-style: none;
     padding: 0;
     margin: 0;
-    width: 100%; /* Faz os itens ocuparem a largura completa */
-    text-align: center; /* Centraliza o texto */
+    width: 100%; /* Largura completa */
+    text-align: center; /* Texto centralizado */
 }
 
 .btn-menu li {
     padding: 20px 0;
-    border-bottom: 1px solid #ddd; /* Linha de separação entre itens */
+    border-bottom: 1px solid #ddd; /* Linha de separação */
 }
 
 .btn-menu li:last-child {
-    border-bottom: none; /* Remove a linha do último item */
+    border-bottom: none; /* Sem linha no último item */
 }
 
 .btn-menu a {
-    display: block; /* Faz com que o link ocupe toda a área do item */
-    color: #000; /* Cor do texto dos links */
-    text-decoration: none; /* Remove sublinhado dos links */
-    font-size: 24px; /* Aumenta o tamanho da fonte */
+    display: block; /* Link ocupa toda a área */
+    color: #000; /* Cor do texto */
+    text-decoration: none; /* Sem sublinhado */
+    font-size: 24px; /* Tamanho da fonte */
     font-weight: bold; /* Negrito */
 }
 
 .btn-menu a:hover {
-    background-color: rgba(2,126,251,0.1); /* Fundo azul claro ao passar o mouse */
-    color: rgba(2,126,251,1); /* Cor do texto ao passar o mouse */
-    border-radius: 4px; /* Bordas arredondadas ao passar o mouse */
-    padding-left: 15px; /* Adiciona espaço à esquerda ao passar o mouse */
+    background-color: rgba(2, 126, 251, 0.1); /* Fundo ao passar mouse */
+    color: rgba(2, 126, 251, 1); /* Cor do texto ao passar mouse */
+    border-radius: 4px; /* Bordas arredondadas */
+    padding-left: 15px; /* Espaço à esquerda */
     transition: all 0.2s ease-in-out; /* Transição suave */
 }
 
 /* Estilos quando o menu está ativo */
 .menu-mobile.active .bars {
-    display: none; /* Esconde o botão de abrir quando o menu está ativo */
+    display: none; /* Esconde botão de abrir */
 }
 
 .menu-mobile.active .close-button {
-    display: block; /* Exibe o botão de fechar quando o menu está ativo */
-    position: fixed;
-    top: 10px;
-    right: 20px;
+    display: block; /* Exibe botão de fechar */
 }
+
+
     .about-container {
         display: flex;
         justify-content: center;
