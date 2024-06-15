@@ -41,7 +41,7 @@ header.scrolled {
 
 .cabecalho-link a {
     color: rgb(0, 0, 0);
-    font-size: 22px;
+    font-size: 20px;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -54,12 +54,12 @@ header.scrolled {
     height: 40px;
     background: transparent;
     color: rgba(2,126,251,1); /* Cor azul para o "D" */
-    font-size: 30px; /* Tamanho do texto da logo */
+    font-size: 28px; /* Tamanho do texto da logo */
     font-weight: bold; /* Negrito para destaque */
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
+    cursor: pointer; 
 }
 
 .logo .logo-text {
@@ -411,6 +411,13 @@ header.scrolled {
 
 .redes-sociais-footer a:hover {
     color: #027efb; /* Cor ao passar o mouse */
+} 
+@media screen and (max-width: 1490px) { 
+    .redes-sociais {
+        font-size: 200%;
+        transition: transform 0.3s ease;
+    }
+    
 }
 @media screen and (max-width: 1350px) {
     .about-container {
