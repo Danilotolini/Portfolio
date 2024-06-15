@@ -41,7 +41,7 @@ header.scrolled {
 
 .cabecalho-link a {
     color: rgb(0, 0, 0);
-    font-size: 16px;
+    font-size: 22px;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -54,7 +54,7 @@ header.scrolled {
     height: 40px;
     background: transparent;
     color: rgba(2,126,251,1); /* Cor azul para o "D" */
-    font-size: 24px; /* Tamanho do texto da logo */
+    font-size: 30px; /* Tamanho do texto da logo */
     font-weight: bold; /* Negrito para destaque */
     display: inline-flex;
     align-items: center;
@@ -90,11 +90,12 @@ header.scrolled {
 .btn-3 {
     background: rgb(0,172,238);
     background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
-    width: 130px;
-    height: 40px;
+    width: 145px;
+    height: 45px;
     line-height: 42px;
     padding: 0;
-    border: none;
+    border: none; 
+    font-size: medium;
 }
 
 .btn-3 span {
@@ -176,16 +177,16 @@ header.scrolled {
 }
 
 .text h3 {
-    font-size: 22px;
+    font-size: 26px;
 }
 
 .text h1 {
-    font-size: 40px;
+    font-size: 48px;
     color: rgba(2,126,251,1);
 }
 
 .text p {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 300;
     margin-top: 10px;
 }
@@ -202,7 +203,7 @@ header.scrolled {
 
 /* Estilo inicial dos ícones de redes sociais */
 .redes-sociais {
-    font-size: 150%;
+    font-size: 250%;
     transition: transform 0.3s ease;
 }
 
@@ -227,7 +228,7 @@ header.scrolled {
   align-items: flex-start;
   height: 80vh;
   padding: 50px;
-  margin-top: 40vh; /* Adiciona um espaçamento superior */
+  margin-top: 45vh; /* Adiciona um espaçamento superior */
   /* O margin-top pode ser ajustado conforme necessário para mover a seção mais para baixo */
   margin-left: 20vh; 
 }
@@ -240,7 +241,7 @@ header.scrolled {
   box-shadow: 0 4px 8px rgba(2, 126, 251, 0.367);
   margin-left: 0; /* Alinha à esquerda */
   margin-right: auto; /* Garante que a margem direita não ocupe espaço */
-  /* Adicionado margin-left e margin-right para alinhamento à esquerda */
+  /* Adicionado margin-left e margin-right para alinhamento à esquerda */ 
 }
 
 .section-about h2 {
@@ -254,7 +255,7 @@ header.scrolled {
   font-size: 16px;
   line-height: 1.6;
   color: #666;
-  text-align: left; /* Alinha o texto à esquerda */
+  text-align: left; /* Alinha o texto à esquerda */ 
 }
 .image-container {
   width: 30%; /* Ajusta a largura da imagem */
@@ -265,7 +266,7 @@ header.scrolled {
   align-items: center;
   box-shadow: 0 0 15px rgba(2, 126, 251, 0.614); /* Sombra azul ao redor da imagem */
   border-radius: 10px; /* Bordas arredondadas */ 
-  margin-right: auto; /* Garante que a margem direita não ocupe espaço */
+  margin-right: auto; /* Garante que a margem direita não ocupe espaço */ 
 }
 
 .image-container img {
@@ -277,9 +278,10 @@ header.scrolled {
 /* Exibe o menu móvel em telas pequenas */ 
 /* Estilos para a seção "Projects" */
 .projects-container {
-    padding: 50px; /* Ajusta o espaçamento interno do contêiner de projetos */
+    padding: 80px 50px; /* Aumenta o espaçamento interno do contêiner de projetos */
     background-color: #ffffff;
-    text-align: center; 
+    text-align: center;
+    margin-top: 40px; /* Aumenta o espaçamento superior entre a seção "About Me" e "Projects" */
 }
 
 .projects-container h2 {
@@ -389,7 +391,7 @@ header.scrolled {
 .footer {
     background-color: #333; /* Cor de fundo do rodapé */
     color: #fff; /* Cor do texto */
-    padding: 20px 0; /* Espaçamento interno */
+    padding:20px 0; /* Espaçamento interno */
     text-align: center; /* Alinhamento do texto */
 }
 
@@ -417,7 +419,7 @@ header.scrolled {
         align-items: center;
         height: auto; /* Altura automática */
         padding: 50px;
-        text-align: center;
+        text-align: center; 
     }
     
     .section-about {
