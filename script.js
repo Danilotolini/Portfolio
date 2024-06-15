@@ -18,3 +18,23 @@ document.querySelector('.bars').addEventListener('click', function() {
 
     // Adiciona o evento de rolagem à janela
     window.addEventListener('scroll', onScroll);
+    document.addEventListener('DOMContentLoaded', function() {
+    }); 
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+    
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                // Ajuste a posição antes de rolar
+                const offset = -100; // Ajuste o valor conforme necessário
+                const targetPosition = target.getBoundingClientRect().top + window.scrollY + offset;
+    
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
