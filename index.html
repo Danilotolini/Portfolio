@@ -16,104 +16,289 @@
 <body>
     <div class="background">
         <header>
-                <div class="logo">
-                    <span class="logo-icon"><i class="fas fa-code"></i></span>
-                    <span class="logo-text">Danilo</span>
-                </div>
-                <ul class="cabecalho-link">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about-me">About me</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#Skills">Skills</a></li>
-                    <li><a href="https://api.whatsapp.com/send/?phone=5511967884852&text=Olá,%20Danilo!%20Gostaria%20de%20falar%20com%20você.&type=phone_number&app_absent=0">
-                    <button class="custom-btn btn-3"><span>CONTACT ME</span></button>
-                    </a></li>
-                </ul>
-           
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fas fa-code"></i></span>
+                <span class="logo-text">Danilo</span>
+            </a>
             
-            <div class="header">
+            <ul class="cabecalho-link">
+                <li><a href="#home" data-lang="en">Home</a></li>
+                <li><a href="#home" data-lang="pt-BR" style="display:none;">Início</a></li>
+                <li><a href="#home" data-lang="it" style="display:none;">Casa</a></li>
+
+                <li><a href="#about-me" data-lang="en">About Me</a></li>
+                <li><a href="#about-me" data-lang="pt-BR" style="display:none;">Sobre Mim</a></li>
+                <li><a href="#about-me" data-lang="it" style="display:none;">Su di Me</a></li>
+
+                <li><a href="#projects" data-lang="en">Projects</a></li>
+                <li><a href="#projects" data-lang="pt-BR" style="display:none;">Projetos</a></li>
+                <li><a href="#projects" data-lang="it" style="display:none;">Progetti</a></li>
+
+                <li><a href="#Skills" data-lang="en">Skills</a></li>
+                <li><a href="#Skills" data-lang="pt-BR" style="display:none;">Habilidades</a></li>
+                <li><a href="#Skills" data-lang="it" style="display:none;">Competenze</a></li>
+
+                <li><a href="https://api.whatsapp.com/send/?phone=5511967884852&text=Olá,%20Danilo!%20Gostaria%20de%20falar%20com%20você.&type=phone_number&app_absent=0">
+                    <button class="custom-btn btn-3" data-lang="en"><span>CONTACT ME</span></button>
+                    <button class="custom-btn btn-3" data-lang="pt-BR" style="display:none;"><span>CONTATO</span></button>
+                    <button class="custom-btn btn-3" data-lang="it" style="display:none;"><span>CONTATTAMI</span></button>
+                </a></li>
+            </ul>
+              <!-- Seletor de idiomas -->
+  
+            
+              <div class="header">
                 <div class="menu-mobile">
                     <div class="bars"><i class="fa-solid fa-bars"></i></div>
                     <div class="close-button"><i class="fa-solid fa-times"></i></div>
                     <div class="btn-menu">
                         <ul>
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#about-me">About me</a></li>
-                            <li><a href="#projects">Projects</a></li>
-                            <li><a href="#Skills">Skills</a></li>
-                            <li><a href="https://api.whatsapp.com/send/?phone=5511967884852&text&type=phone_number&app_absent=0">Contact me</a></li>
+                            <!-- Links em inglês -->
+                            <li class="menu-item" data-lang="en">
+                                <a href="#home">Home</a>
+                            </li>
+                            <li class="menu-item" data-lang="en">
+                                <a href="#about-me">About me</a>
+                            </li>
+                            <li class="menu-item" data-lang="en">
+                                <a href="#projects">Projects</a>
+                            </li>
+                            <li class="menu-item" data-lang="en">
+                                <a href="#skills">Skills</a>
+                            </li>
+                            <li class="menu-item" data-lang="en">
+                                <a href="https://api.whatsapp.com/send/?phone=5511967884852&text&type=phone_number&app_absent=0">Contact me</a>
+                            </li>
+            
+                            <!-- Links em português -->
+                            <li class="menu-item" data-lang="pt-BR" style="display:none;">
+                                <a href="#home">Início</a>
+                            </li>
+                            <li class="menu-item" data-lang="pt-BR" style="display:none;">
+                                <a href="#about-me">Sobre mim</a>
+                            </li>
+                            <li class="menu-item" data-lang="pt-BR" style="display:none;">
+                                <a href="#projects">Projetos</a>
+                            </li>
+                            <li class="menu-item" data-lang="pt-BR" style="display:none;">
+                                <a href="#skills">Habilidades</a>
+                            </li>
+                            <li class="menu-item" data-lang="pt-BR" style="display:none;">
+                                <a href="https://api.whatsapp.com/send/?phone=5511967884852&text&type=phone_number&app_absent=0">Entre em contato</a>
+                            </li>
+            
+                            <!-- Links em italiano -->
+                            <li class="menu-item" data-lang="it" style="display:none;">
+                                <a href="#home">Home</a>
+                            </li>
+                            <li class="menu-item" data-lang="it" style="display:none;">
+                                <a href="#about-me">Chi sono</a>
+                            </li>
+                            <li class="menu-item" data-lang="it" style="display:none;">
+                                <a href="#projects">Progetti</a>
+                            </li>
+                            <li class="menu-item" data-lang="it" style="display:none;">
+                                <a href="#skills">Competenze</a>
+                            </li>
+                            <li class="menu-item" data-lang="it" style="display:none;">
+                                <a href="https://api.whatsapp.com/send/?phone=5511967884852&text&type=phone_number&app_absent=0">Contattami</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
+            
         </header>
-
+  <div class="language-selector">
+        <select id="languageSwitcher">
+            <option value="en">English</option>
+            <option value="pt-BR">Português (BR)</option>
+            <option value="it">Italiano</option>
+        </select>
+    </div>
         <div class="container-text" id="home">
-            <div class="text">
-                <h3>Hello. I'm</h3>
+            <div class="text"> 
+                <h3 data-lang="en">Hello. I'm</h3>
+                <h3 data-lang="pt-BR" style="display:none;">Olá. Eu sou</h3>
+                <h3 data-lang="it" style="display:none;">Ciao. Sono</h3>
                 <h1>Danilo dos Santos Tolini Martins</h1>
-                <p>Computer Science student</p>
+                <p data-lang="en">Software Developer</p>
+                <p data-lang="pt-BR" style="display:none;">Desenvolvedor de Software</p>
+                <p data-lang="it" style="display:none;">Sviluppatore Software</p>
                 <div class="redes-sociais">
                     <a href="https://www.linkedin.com/in/danilo-dos-santos-tolini-martins/"><i class="fa-brands fa-linkedin"></i></a>
                     <a href="https://github.com/Danilotolini"><i class="fa-brands fa-github"></i></a>
                 </div>
                 <div class="btn-sobremim">
                     <a href="#about-me">
-                    <button class="custom-btn btn-3"><span>About me</span></button></a>
+                        <button class="custom-btn btn-3" data-lang="en"><span>About Me</span></button>
+                        <button class="custom-btn btn-3" data-lang="pt-BR" style="display:none;"><span>Sobre Mim</span></button>
+                        <button class="custom-btn btn-3" data-lang="it" style="display:none;"><span>Su di Me</span></button>
+                    </a>
                 </div>
             </div>
         </div>
+    <div class="squares-container">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
     </div>
+
 
     <div id="about-me">
         <div class="about-container">
             <div class="section-about">
-                <h2>About Me</h2>
-                <p>Hello, my name is Danilo. I am a Computer Science student at São Judas Tadeu University and currently pursuing a Java Programming course at Impacta College. Additionally, I am studying English at Cultura Inglesa to enhance my global communication skills.</p>
-                <p>I have a strong interest and passion for software development. I am always eager to learn new skills and apply them to practical projects. My goal is to contribute to technological advancements by offering creative and efficient solutions. I am seeking opportunities to expand my knowledge and be part of collaborative teams.</p>
+                <h2 data-lang="en">About Me</h2>
+                <h2 data-lang="pt-BR" style="display:none;">Sobre Mim</h2>
+                <h2 data-lang="it" style="display:none;">Chi Sono</h2>
+                <p data-lang="en">Hello, my name is Danilo, and I am a Computer Science student at São Judas Tadeu University. I have completed a Java Programming course at Impacta College and am currently studying English at Cultura Inglesa to improve my global communication skills. I have a deep passion for software development and am always eager to learn and apply new skills in real-world projects. My goal is to contribute to technological advancements by providing innovative and efficient solutions. I am actively seeking opportunities to expand my knowledge and collaborate with dynamic teams.</p>
+                <p data-lang="pt-BR" style="display:none;">Olá, meu nome é Danilo, e eu sou estudante de Ciência da Computação na Universidade São Judas Tadeu. Eu completei um curso de Programação em Java na Impacta e atualmente estou estudando inglês na Cultura Inglesa para melhorar minhas habilidades de comunicação global. Tenho uma profunda paixão pelo desenvolvimento de software e estou sempre ansioso para aprender e aplicar novas habilidades em projetos do mundo real. Meu objetivo é contribuir para os avanços tecnológicos, fornecendo soluções inovadoras e eficientes. Estou ativamente em busca de oportunidades para expandir meu conhecimento e colaborar com equipes dinâmicas.</p>
+                <p data-lang="it" style="display:none;">Ciao, mi chiamo Danilo, e sono uno studente di Informatica all'Università São Judas Tadeu. Ho completato un corso di Programmazione Java al Collegio Impacta e attualmente studio inglese alla Cultura Inglesa per migliorare le mie competenze comunicative globali. Ho una profonda passione per lo sviluppo software e sono sempre ansioso di apprendere e applicare nuove competenze in progetti del mondo reale. Il mio obiettivo è contribuire ai progressi tecnologici fornendo soluzioni innovative ed efficienti. Sto attivamente cercando opportunità per espandere la mia conoscenza e collaborare con team dinamici.</p>                
+                    
             </div>
             <div class="image-container">
-                <img src="https://i.ibb.co/cNNW3GS/Whats-App-Image-2024-06-14-at-17-00-41-15af8005.jpg" alt="Foto de Danilo">
+                <img src="https://i.ibb.co/WG0hMxW/danilo09.jpg" alt="Foto de Danilo">
             </div>
         </div>
     </div>
 
     <div class="projects-container" id="projects">
-        <h2>Projects</h2>
+        <h2 data-lang="en">Projects</h2>
+        <h2 data-lang="pt-BR" style="display:none;">Projetos</h2>
+        <h2 data-lang="it" style="display:none;">Progetti</h2>
+
         <div class="projects-grid">
             <div class="project-item">
                 <img class="project-image" src="https://i.ibb.co/JcK3j2t/hotel2.png" alt="Hotel Santos Beachfront">
-                <div class="project-title">Hotel Santos Beachfront</div>
-                <p class="project-description">"Hotel Santos Beachfront" is a dynamic website built with HTML, CSS, and JavaScript, designed for a fictional hotel. It features user login functionality, detailed room and amenities information, leisure options, and a contact form for reservations and inquiries.</p>
-                <a class="project-link" href="https://github.com/Danilotolini/Hotel-Santos-Beachfront">GitHub Repository</a>
-            </div> 
+                <div class="project-title" data-lang="en">Hotel Santos Beachfront</div>
+<div class="project-title" data-lang="pt-BR" style="display:none;">Hotel Santos Beachfront</div>
+<div class="project-title" data-lang="it" style="display:none;">Albergo Santos Beachfront</div>
+
+<p class="project-description" data-lang="en">"Hotel Santos Beachfront" is a dynamic website built with HTML, CSS, and JavaScript, designed for a fictional hotel. It features user login functionality, detailed room and amenities information, leisure options, and a contact form for reservations and inquiries.</p>
+<p class="project-description" data-lang="pt-BR" style="display:none;">"Hotel Santos Beachfront" é um site dinâmico construído com HTML, CSS e JavaScript, projetado para um hotel fictício. Ele apresenta funcionalidades de login de usuário, informações detalhadas sobre quartos e comodidades, opções de lazer e um formulário de contato para reservas e consultas.</p>
+<p class="project-description" data-lang="it" style="display:none;">"Albergo Santos Beachfront" è un sito web dinamico costruito con HTML, CSS e JavaScript, progettato per un hotel fittizio. Presenta funzionalità di accesso per gli utenti, informazioni dettagliate su camere e servizi, opzioni di svago e un modulo di contatto per prenotazioni e richieste.</p>
+
+<a class="project-link" href="https://github.com/Danilotolini/Hotel-Santos-Beachfront" data-lang="en">GitHub Repository</a>
+<a class="project-link" href="https://github.com/Danilotolini/Hotel-Santos-Beachfront" data-lang="pt-BR" style="display:none;">Repositório no GitHub</a>
+<a class="project-link" href="https://github.com/Danilotolini/Hotel-Santos-Beachfront" data-lang="it" style="display:none;">Repository su GitHub</a>
+
+            </div>  
+            <div class="project-item">
+                <img class="project-image" src="https://i.ibb.co/Gx2JCFS/login5.png" alt="Tela-imagem" border="0">
+                <h3 class="project-title" data-lang="en">Login System</h3>
+                <h3 class="project-title" data-lang="pt-BR" style="display:none;">Sistema de Login</h3>
+                <h3 class="project-title" data-lang="it" style="display:none;">Sistema di Login</h3>
+                
+                <p class="project-description" data-lang="en">
+                    Developed a secure and robust user authentication system, applying best software development practices. I successfully integrated different technologies, resulting in a scalable and easy-to-maintain solution.
+                </p>
+                <p class="project-description" data-lang="pt-BR" style="display:none;">
+                    Desenvolvi um sistema de autenticação de usuários seguro e robusto, aplicando as melhores práticas de desenvolvimento de software. Integrei com sucesso diferentes tecnologias, resultando em uma solução escalável e de fácil manutenção.
+                </p>
+                <p class="project-description" data-lang="it" style="display:none;">
+                    Ho sviluppato un sistema di autenticazione degli utenti sicuro e robusto, applicando le migliori pratiche di sviluppo software. Ho integrato con successo diverse tecnologie, ottenendo una soluzione scalabile e facile da mantenere.
+                </p>
+                
+                <a class="project-link" href="https://github.com/Danilotolini/Login" data-lang="en">GitHub Repository</a>
+                <a class="project-link" href="https://github.com/Danilotolini/Login" data-lang="pt-BR" style="display:none;">Repositório no GitHub</a>
+                <a class="project-link" href="https://github.com/Danilotolini/Login" data-lang="it" style="display:none;">Repository su GitHub</a>
+                
+            </div>
             <div class="project-item">
                 <img class="project-image" src="https://i.ibb.co/TmDNLrV/Tela-imagem.png" alt="Tela-imagem" border="0">
-                <h3 class="project-title">Cadastro de Alunos</h3>
-                <p class="project-description">
-                    I developed an application for student registration, which allows you to insert, sort, display and remove students from a list in a practical and intuitive way. The graphical interface was built with Swing, providing a user-friendly experience.</p>
-                <a class="project-link" href="https://github.com/Danilotolini/Calculadora.git">GitHub Repository</a>
+                <h3 class="project-title" data-lang="en">Student Registration</h3>
+                <h3 class="project-title" data-lang="pt-BR" style="display:none;">Cadastro de Alunos</h3>
+                <h3 class="project-title" data-lang="it" style="display:none;">Registrazione degli Studenti</h3>
+                
+                <p class="project-description" data-lang="en">
+                    I developed an application for student registration, which allows you to insert, sort, display, and remove students from a list in a practical and intuitive way. The graphical interface was built with Swing, providing a user-friendly experience.
+                </p>
+                <p class="project-description" data-lang="pt-BR" style="display:none;">
+                    Desenvolvi uma aplicação para cadastro de alunos, que permite inserir, ordenar, exibir e remover alunos de uma lista de forma prática e intuitiva. A interface gráfica foi construída com Swing, proporcionando uma experiência amigável ao usuário.
+                </p>
+                <p class="project-description" data-lang="it" style="display:none;">
+                    Ho sviluppato un'applicazione per la registrazione degli studenti, che consente di inserire, ordinare, visualizzare e rimuovere studenti da un elenco in modo pratico e intuitivo. L'interfaccia grafica è stata realizzata con Swing, offrendo un'esperienza user-friendly.
+                </p>
+                
+                <a class="project-link" href="https://github.com/Danilotolini/CadastroAlunos" data-lang="en">GitHub Repository</a>
+                <a class="project-link" href="https://github.com/Danilotolini/CadastroAlunos" data-lang="pt-BR" style="display:none;">Repositório no GitHub</a>
+                <a class="project-link" href="https://github.com/Danilotolini/CadastroAlunos" data-lang="it" style="display:none;">Repository su GitHub</a>
+                
+            </div> 
+            <div class="project-item">
+                <img class="project-image" src="https://i.ibb.co/JFZF9VX/python1.png" alt="Python">
+                <h3 class="project-title" data-lang="en">Diagnosis with Artificial Intelligence</h3>
+<h3 class="project-title" data-lang="pt-BR" style="display:none;">Diagnóstico com Inteligência Artificial</h3>
+<h3 class="project-title" data-lang="it" style="display:none;">Diagnosi con Intelligenza Artificiale</h3>
+
+<p class="project-description" data-lang="en">
+    Used advanced machine learning techniques, including Linear Regression, Logistic Regression, KNN, and Naive Bayes, to analyze medical diagnostic data. The model developed achieved an accuracy of 95% in predicting precise diagnoses, contributing to more assertive medical decisions.
+</p>
+<p class="project-description" data-lang="pt-BR" style="display:none;">
+    Utilizou técnicas avançadas de aprendizado de máquina, incluindo Regressão Linear, Regressão Logística, KNN e Naive Bayes, para analisar dados de diagnósticos médicos. O modelo desenvolvido alcançou uma precisão de 95% na previsão de diagnósticos precisos, contribuindo para decisões médicas mais assertivas.
+</p>
+<p class="project-description" data-lang="it" style="display:none;">
+    Sono state utilizzate tecniche avanzate di apprendimento automatico, tra cui la regressione lineare, la regressione logistica, KNN e Naive Bayes, per analizzare i dati diagnostici medici. Il modello sviluppato ha raggiunto un'accuratezza del 95% nella previsione di diagnosi precise, contribuendo a decisioni mediche più assertive.
+</p>
+
+<a class="project-link" href="https://github.com/Romulomrs/elppa" data-lang="en">GitHub Repository</a>
+<a class="project-link" href="https://github.com/Romulomrs/elppa" data-lang="pt-BR" style="display:none;">Repositório no GitHub</a>
+<a class="project-link" href="https://github.com/Romulomrs/elppa" data-lang="it" style="display:none;">Repository su GitHub</a>
+
             </div>
             <div class="project-item">
                 <img class="project-image" src="https://i.ibb.co/jWC1tZZ/calculadora.png" alt="Calculadora">
-                <h3 class="project-title">Calculadora</h3>
-                <p class="project-description">This project showcases a simple calculator built using HTML, CSS, and JavaScript. The design is functional and responsive, ensuring a consistent user experience across different devices.</p>
-                <a class="project-link" href="https://github.com/Danilotolini/Calculadora.git">GitHub Repository</a>
+                <h3 class="project-title" data-lang="en">Calculator</h3>
+                <h3 class="project-title" data-lang="pt-BR" style="display:none;">Calculadora</h3>
+                <h3 class="project-title" data-lang="it" style="display:none;">Calcolatrice</h3>
+                
+                <p class="project-description" data-lang="en">
+                    This project showcases a simple calculator built using HTML, CSS, and JavaScript. The design is functional and responsive, ensuring a consistent user experience across different devices.
+                </p>
+                <p class="project-description" data-lang="pt-BR" style="display:none;">
+                    Este projeto apresenta uma calculadora simples construída com HTML, CSS e JavaScript. O design é funcional e responsivo, garantindo uma experiência do usuário consistente em diferentes dispositivos.
+                </p>
+                <p class="project-description" data-lang="it" style="display:none;">
+                    Questo progetto presenta una semplice calcolatrice realizzata con HTML, CSS e JavaScript. Il design è funzionale e reattivo, garantendo un'esperienza utente coerente su diversi dispositivi.
+                </p>
+                
+                <a class="project-link" href="https://github.com/Danilotolini/Calculadora.git" data-lang="en">GitHub Repository</a>
+                <a class="project-link" href="https://github.com/Danilotolini/Calculadora.git" data-lang="pt-BR" style="display:none;">Repositório no GitHub</a>
+                <a class="project-link" href="https://github.com/Danilotolini/Calculadora.git" data-lang="it" style="display:none;">Repository su GitHub</a>         
             </div>
         </div> 
-    </div> 
-
+        <div class="projects-controls">
+            <button id="verMaisBtnEN" data-lang="en" style="display:none;">View More</button>
+            <button id="verMaisBtnPT" data-lang="pt-BR" style="display:none;">Ver Mais</button>
+            <button id="verMaisBtnIT" data-lang="it" style="display:none;">Vedi di più</button>
+        
+            <button id="fecharBtnPT" style="display:none;" data-lang="pt-BR">Fechar</button>
+            <button id="fecharBtnEN" style="display:none;" data-lang="en">Close</button>
+            <button id="fecharBtnIT" style="display:none;" data-lang="it">Chiudere</button>
+        </div>
+        
+</div>
     <div class="skills-container" id="Skills">
-        <h2>Skills</h2>
+        <h2 data-lang="en">Skills</h2>
+        <h2 data-lang="pt-BR" style="display:none;">Habilidades</h2>
+        <h2 data-lang="it" style="display:none;">Competenze</h2>
+
         <div class="skills-grid">
-            <div class="skill-item">
+            <div class="skill-item"> 
+                <a href="https://www.impacta.com.br/certificado/K01NQ3dCSW50a3JBLzFSQm9OTzNEdz09">
                 <i class="fab fa-java"></i>
-                <p>Java</p>
-            </div>
+                <p>Java</p> 
+            </a>
+            </div> 
             <div class="skill-item">
-                <i class="fab fa-aws"></i>
-                <p>AWS</p>
+                <a href="https://www.credly.com/badges/81e4dc2e-d004-4e46-81b9-6726a6417e6f/linked_in_profile" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-aws"></i>
+                    <p>AWS</p>
+                </a>
             </div>
+            
             <div class="skill-item">
                 <i class="fas fa-database"></i>
                 <p>SQL</p>
@@ -151,7 +336,10 @@
 
     <div class="footer">
         <div class="footer-content">
-            <p>&copy; 2024 Danilo dos Santos Tolini Martins. Todos os direitos reservados.</p>
+            <p data-lang="pt-BR">&copy; 2024 Danilo dos Santos Tolini Martins. Todos os direitos reservados.</p>
+            <p data-lang="en" style="display:none;">&copy; 2024 Danilo dos Santos Tolini Martins. All rights reserved.</p>
+            <p data-lang="it" style="display:none;">&copy; 2024 Danilo dos Santos Tolini Martins. Tutti i diritti riservati.</p>
+
             <div class="redes-sociais-footer">
                 <a href="https://www.linkedin.com/in/danilo-dos-santos-tolini-martins/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="https://github.com/Danilotolini" target="_blank"><i class="fa-brands fa-github"></i></a>
