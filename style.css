@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@400&display=swap'); /* Fontes */@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@400&display=swap'); 
+ 
 body {
     background: #e0e5ec; /* Cor de fundo da página */
     padding-top: 80px; /* Espaço superior para evitar sobreposição do header fixo */
@@ -12,7 +13,106 @@ body {
     text-decoration: none;
     list-style: none;
     font-family: "Poppins", sans-serif;
+} 
+.language-selector {
+    display: flex; /* Use flexbox para um melhor controle de alinhamento */
+    justify-content: flex-start; /* Alinha o seletor à esquerda */
+    align-items: center; /* Alinha verticalmente ao centro */
+    margin-top: 0%; /* Define a margem superior para descer a altura */
+    margin-left: 87%; /* Adiciona uma margem à esquerda para mover mais para a esquerda */
 }
+
+
+.language-selector select {
+    font-size: 16px; /* Tamanho da fonte */
+    padding: 8px; /* Preenchimento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    border: 1px solid rgba(2, 126, 251, 0.5); /* Borda */
+    color: rgba(2, 126, 251, 1); /* Cor do texto */
+    background-color: white; /* Fundo branco */
+    cursor: pointer; /* Muda o cursor ao passar sobre o seletor */
+    appearance: none; /* Remove o estilo padrão do seletor */
+    background-image: url('path/to/your/custom-arrow.png'); /* Adicione uma imagem personalizada para a seta */
+    background-repeat: no-repeat; /* Não repetir a imagem */
+    background-position: right 10px center; /* Posiciona a imagem */
+    background-size: 12px; /* Tamanho da seta */
+}
+
+.language-selector select:focus {
+    outline: none; /* Remove o contorno padrão ao focar */
+    border-color: rgba(2, 126, 251, 1); /* Muda a cor da borda ao focar */
+}
+
+.language-selector select option {
+    background-color: white; /* Fundo branco das opções */
+    color: rgba(2, 126, 251, 1); /* Cor do texto das opções */
+}
+
+/* Estilo para os quadrados animados */
+.squares-container {
+    position: relative; /* Para o posicionamento relativo do contêiner */
+    display: flex; /* Usar flex para organizar os quadrados */
+    flex-wrap: wrap; /* Permite que os quadrados se movam para a próxima linha, se necessário */
+    justify-content: flex-end; /* Alinha os quadrados à direita */
+    gap: 30px; /* Aumenta o espaço entre os quadrados */
+    margin-top: 20px; /* Espaço acima dos quadrados */
+    padding-right: 30px; /* Espaço à direita do contêiner */
+}
+
+.square {
+    background-color: rgba(2, 126, 251, 0.6); /* Azul com um pouco de transparência */
+    opacity: 0.7; /* Opacidade dos quadrados */
+    animation: float 3s infinite ease-in-out; /* Animação de flutuação mais rápida */
+}
+
+/* Animação para os quadrados */
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg); /* Começa na posição original e sem rotação */
+    }
+    50% {
+        transform: translateY(-30px) rotate(10deg); /* Move para cima e adiciona rotação */
+    }
+    100% {
+        transform: translateY(0) rotate(0deg); /* Volta para a posição original */
+    }
+}
+
+/* Criação de quadrados em posições específicas */
+.square { 
+    width: 50px; /* Tamanho padrão */
+    height: 50px; /* Tamanho padrão */
+} 
+
+.square:nth-child(1) { 
+    margin-top: -1%;
+}
+
+.square:nth-child(2) { 
+    margin-top: -10%;
+    width: 70px; /* Largura do segundo quadrado */
+    height: 70px; /* Altura do segundo quadrado */
+}
+
+.square:nth-child(3) { 
+    margin-top: -5%;
+    width: 30px; /* Largura do terceiro quadrado */
+    height: 30px; /* Altura do terceiro quadrado */
+}
+
+.square:nth-child(4) { 
+    margin-top: -2%;
+    width: 40px; /* Largura do quarto quadrado */
+    height: 40px; /* Altura do quarto quadrado */
+}
+
+.square:nth-child(5) { 
+    margin-top: -12%;
+    width: 60px; /* Largura do quinto quadrado */
+    height: 60px; /* Altura do quinto quadrado */
+}
+
+/* Os estilos existentes permanecem sem alteração */
 
 header {
     position: fixed;
@@ -51,22 +151,68 @@ header.scrolled {
     color: rgb(0, 128, 255);
 }
 
-.logo {
-    height: 40px;
+.logo { 
+    margin-left: 13%;
+    height: 50px; /* Aumentando um pouco a altura para destacar */
     background: transparent;
-    color: rgba(2,126,251,1); /* Cor azul para o "D" */
-    font-size: 30px; /* Tamanho do texto da logo */
-    font-weight: bold; /* Negrito para destaque */
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    cursor: pointer; 
-    width: 30%;
+    justify-content: flex-start;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif; /* Fonte estilosa */
+    transition: transform 0.4s ease; /* Transição suave ao passar o mouse */
+    width: auto; /* Ajuste automático à largura do conteúdo */
 }
 
+/* Efeito de hover para a logo */
+.logo:hover {
+    transform: scale(1.1); /* Aumenta levemente o tamanho no hover */
+}
+
+/* Estilos para o ícone da logo */
+.logo-icon {
+    font-size: 36px; /* Ícone maior para destaque */
+    color: rgba(2,126,251,1); /* Azul forte */
+    animation: bounce 2s infinite; /* Animação de pulso contínuo */
+}
+
+/* Animação do ícone */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px); /* Pequeno movimento para cima */
+    }
+}
+
+/* Estilos para o texto da logo */
 .logo .logo-text {
-    color: #000; /* Cor preta para o restante do texto */
-    margin-left: 5px; /* Espaço entre o "D" azul e o resto do texto */
+    font-size: 30px; /* Tamanho grande para o texto */
+    font-weight: 700; /* Negrito forte */
+    color: #000; /* Cor preta para o texto "Danilo" */
+    margin-left: 10px; /* Espaço entre o ícone e o texto */
+    position: relative;
+}
+
+/* Animação suave no hover do texto */
+.logo:hover .logo-text {
+    color: rgba(2,126,251,1); /* Muda a cor para azul no hover */
+}
+
+.logo .logo-text::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 3px;
+    background-color: rgba(2,126,251,1); /* Barra azul decorativa */
+    transition: width 0.4s ease; /* Crescimento suave da barra */
+}
+
+.logo:hover .logo-text::before {
+    width: 100%; /* A barra cresce ao passar o mouse */
 }
 
 .custom-btn {
@@ -174,48 +320,82 @@ header.scrolled {
 }
 
 /* FIM DO BUTTON */
-
+/* Estilos existentes */
 .container-text {
     padding: 150px 0 0 130px;
+    display: flex;
+    flex-direction: column; /* Alinha os elementos verticalmente */
+    align-items: flex-start; /* Alinha os itens à esquerda */
 }
 
+/* Estilos para "Hello, I'm" */
 .text h3 {
     font-size: 26px;
+    opacity: 0; /* Inicialmente invisível */
+    background-color: rgba(0, 0, 0, 0.1); /* Fundo com transparência */
+    color: rgba(0, 0, 0, 0.8); /* Cor neutra */
+    padding: 10px 20px; /* Espaçamento ao redor do texto */
+    border-radius: 10px; /* Bordas arredondadas */
+    display: inline-block; /* Ajusta o fundo ao texto */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: opacity 0.6s ease, transform 0.6s ease, background-color 0.3s ease; /* Transições suaves */
+    animation: fadeIn 0.5s ease forwards; /* Animação de aparecimento mais rápida */
+    animation-delay: 0.3s; /* Atraso reduzido */
 }
 
+/* Estilo para o nome com animação de digitação */
 .text h1 {
     font-size: 48px;
-    color: rgba(2,126,251,1);
+    color: rgba(2, 126, 251, 1); /* Cor azul para o nome */
+    overflow: hidden; /* Esconde texto não digitado */
+    white-space: nowrap; /* Impede quebras de linha */
+    border-right: 4px solid rgba(2, 126, 251, 1); /* Cursivo à direita */
 }
 
+/* Animação de fade in para o texto */
+@keyframes fadeIn {
+    to { opacity: 1; } /* Animação para aparecer */
+}
+
+/* Estilo para "Software Developer" */
 .text p {
-    font-size: 18px;
-    font-weight: 300;
-    margin-top: 10px;
+    font-size: 20px; /* Aumenta o tamanho da fonte */
+    font-weight: 500; /* Deixa o texto mais destacado */
+    margin-top: 10px; /* Margem acima do parágrafo */
+    opacity: 0; /* Inicialmente invisível */
+    animation: fadeIn 0.5s ease forwards; /* Animação de aparecimento mais rápida */
+    animation-delay: 1.1s; /* Atraso para surgir após o nome */
+    color: rgba(0, 0, 0, 0.8); /* Cor neutra para "Software Developer" */
+    text-transform: uppercase; /* Transforma em maiúsculas */
+    letter-spacing: 1px; /* Espaçamento entre letras */
 }
 
+/* Estilos para redes sociais e botão */
 .redes-sociais a {
-    color: rgba(2,126,251,1);
+    color: rgba(2, 126, 251, 1);
     padding: 3px;
     margin-top: 5px;
+    opacity: 0; /* Inicialmente invisível */
+    animation: fadeIn 0.5s ease forwards; /* Animação de aparecimento mais rápida */
+    animation-delay: 1.3s; /* Atraso para redes sociais */
 }
 
 .btn-sobremim {
     margin-top: 24px;
+    opacity: 0; /* Inicialmente invisível */
+    animation: fadeIn 0.5s ease forwards; /* Animação de aparecimento mais rápida */
+    animation-delay: 1.5s; /* Atraso para o botão */
 }
 
 /* Estilo inicial dos ícones de redes sociais */
 .redes-sociais {
     font-size: 250%;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; /* Transição suave para transformação */
 }
 
-.fa-linkedin:hover {
-    font-size: 140%;
-}
-
-.fa-github:hover {
-    font-size: 140%;
+/* Efeitos ao passar o mouse sobre ícones */
+.fa-linkedin:hover, .fa-github:hover {
+    font-size: 140%; /* Aumenta o tamanho ao passar o mouse */
 }
 
 /* Esconde o menu móvel por padrão */
@@ -236,30 +416,125 @@ header.scrolled {
   margin-left: 20vh; 
 }
 
-.section-about {  
-  width: 40%; /* Ocupa 50% da largura da tela */
-  padding: 20px;
-  background-color: #f5f5f5;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(2, 126, 251, 0.367);
-  margin-left: 0; /* Alinha à esquerda */
-  margin-right: auto; /* Garante que a margem direita não ocupe espaço */
-  /* Adicionado margin-left e margin-right para alinhamento à esquerda */ 
-}
-
-.section-about h2 {
-  font-size: 28px;
-  color: rgba(2,126,251,1);
-  margin-bottom: 20px;
-  text-align: left; /* Alinha o texto à esquerda */
-}
-
-.section-about p {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #666;
-  text-align: left; /* Alinha o texto à esquerda */ 
-}
+.section-about {
+    width: 45%; /* Ajuste da largura para um layout mais estreito */
+    padding: 40px;
+    background-color: #f7f7f7; /* Fundo neutro e sofisticado */
+    border-radius: 15px; /* Bordas arredondadas suaves */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08); /* Sombra discreta */
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+  }
+  
+  /* Efeito ao passar o mouse */
+  .section-about:hover {
+    transform: translateY(-8px); /* Leve elevação no hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12); /* Sombra mais intensa no hover */
+  }
+  
+  /* Título da seção */
+  .section-about h2 {
+    font-size: 32px; /* Tamanho adequado e elegante */
+    color: #024cbf; /* Azul escuro sofisticado */
+    margin-bottom: 18px; /* Espaço entre título e parágrafo */
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 10px;
+    letter-spacing: 0.5px; /* Espaçamento leve entre letras */
+  }
+  
+  .section-about h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 70px;
+    height: 3px;
+    background-color: #024cbf; /* Barra decorativa sutil */
+    border-radius: 2px; /* Bordas arredondadas na linha */
+  }
+  
+  /* Texto do parágrafo */
+  .section-about p {
+    font-size: 17px; /* Tamanho de fonte confortável */
+    line-height: 1.7; /* Melhor espaçamento para leitura */
+    color: #333; /* Cor mais escura para melhor contraste */
+    text-align: justify; /* Justificação para manter o texto alinhado */
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 0;
+    max-width: 100%;
+  }
+  
+  /* Estilo da primeira letra */
+  .section-about p::first-letter {
+    font-size: 26px;
+    font-weight: bold;
+    color: #024cbf; /* Destaque na primeira letra */
+  }
+  
+  /* Container da seção */
+  .section-about {
+    width: 45%; /* Ajuste da largura para um layout mais estreito */
+    padding: 40px;
+    background: linear-gradient(135deg, #f0f4ff, #d6e7ff); /* Degradê suave */
+    border-radius: 15px; /* Bordas arredondadas suaves */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08); /* Sombra discreta */
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+  }
+  
+  /* Efeito ao passar o mouse */
+  .section-about:hover {
+    transform: translateY(-8px); /* Leve elevação no hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12); /* Sombra mais intensa no hover */
+  }
+  
+  /* Título da seção */
+  .section-about h2 {
+    font-size: 32px; /* Tamanho adequado e elegante */
+    color: #024cbf; /* Azul escuro sofisticado */
+    margin-bottom: 18px; /* Espaço entre título e parágrafo */
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 10px;
+    letter-spacing: 0.5px; /* Espaçamento leve entre letras */
+  }
+  
+  .section-about h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 70px;
+    height: 3px;
+    background-color: #024cbf; /* Barra decorativa sutil */
+    border-radius: 2px; /* Bordas arredondadas na linha */
+  }
+  
+  /* Texto do parágrafo */
+  .section-about p {
+    font-size: 17px; /* Tamanho de fonte confortável */
+    line-height: 1.7; /* Melhor espaçamento para leitura */
+    color: #333; /* Cor mais escura para melhor contraste */
+    text-align: justify; /* Justificação para manter o texto alinhado */
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 0;
+    max-width: 100%;
+  }
+  
+  /* Estilo da primeira letra */
+  .section-about p::first-letter {
+    font-size: 26px;
+    font-weight: bold;
+    color: #024cbf; /* Destaque na primeira letra */
+  }
+  
 .image-container {
   width: 30%; /* Ajusta a largura da imagem */
   height: 75%; /* Altura da imagem */
@@ -278,68 +553,112 @@ header.scrolled {
   object-fit: cover; /* Garante que a imagem seja cortada */
   border-radius: 10px; /* Bordas arredondadas */
 }
-/* Exibe o menu móvel em telas pequenas */ 
-/* Estilos para a seção "Projects" */
 .projects-container {
-    padding: 80px 50px; /* Aumenta o espaçamento interno do contêiner de projetos */
+    padding: 80px 50px;
     background-color: #ffffff;
     text-align: center;
-    margin-top: 40px; /* Aumenta o espaçamento superior entre a seção "About Me" e "Projects" */
+    margin-top: 40px;
 }
 
 .projects-container h2 {
-    margin-bottom: 25px; /* Ajuste conforme necessário */
+    margin-bottom: 25px;
 }
-
 .projects-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    padding: 20px; /* Adiciona um pouco de espaçamento ao redor da grade */
 }
 
 .project-item {
-    width: calc(50% - 40px); /* Ajusta conforme necessário */
-    max-width: 400px; /* Largura máxima para evitar que fiquem muito largos */
+    width: calc(50% - 40px);
+    max-width: 400px;
     padding: 20px;
-    background: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    background: #f4f7f9; /* Cor de fundo suave */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra mais profunda */
+    border-radius: 15px; /* Bordas mais arredondadas */
     text-align: center;
-    transition: transform 0.3s ease;
-    margin-bottom: 20px; /* Espaçamento inferior entre os projetos */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição para sombra */
+    margin-bottom: 20px;
+    overflow: hidden; /* Garante que a imagem não ultrapasse o item */
 }
 
 .project-item:hover {
     transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao passar o mouse */
+    background: #eaecef; /* Fundo levemente cinza ao passar o mouse */
 }
 
 .project-image {
     width: 100%;
-    height: auto;
+    height: 200px; /* Altura fixa para imagens */
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 10px 10px 0 0; /* Bordas arredondadas apenas na parte superior */
+    transition: transform 0.3s ease; /* Transição suave para a imagem */
+}
+
+.project-item:hover .project-image {
+    transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
 }
 
 .project-description {
     font-size: 16px;
-    color: #666;
+    color: #555; /* Texto um pouco mais escuro para melhor legibilidade */
     line-height: 1.6;
-    margin-bottom: 10px;
+    margin: 10px 0; /* Adiciona margens para melhor espaçamento */
 }
 
 .project-title {
     font-size: 20px;
-    color: #027efb;
+    color: #333; /* Cor escura para maior elegância */
     margin-bottom: 10px;
+    font-weight: bold; /* Torna o título mais destacado */
 }
 
 .project-link {
-    display: block;
+    display: inline-block; /* Altera o display para inline-block */
     text-decoration: none;
-    color: #027efb;
+    color: #333; /* Cor escura para maior elegância */
     font-weight: bold;
+    border: 2px solid transparent; /* Para efeito de borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 10px 15px; /* Espaciamento interno */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Transições suaves */
 }
+
+.project-link:hover {
+    background-color: rgba(0, 0, 0, 0.05); /* Fundo levemente cinza ao passar mouse */
+    color: #333; /* Mantém a cor do texto escura ao passar o mouse */
+    border-color: #aaa; /* Bordas cinzas ao passar o mouse */
+}
+
+.projects-controls { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ajuste conforme necessário */
+    margin-top: 20px;
+}
+
+.projects-controls button {
+    background-color: #007bff; /* Azul elegante */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0; /* Remove a margem direita */
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transição suave */
+}
+
+.projects-controls button:hover {
+    background-color: #0056b3; /* Azul escuro ao passar o mouse */
+    transform: translateY(-2px); /* Efeito de elevação ao passar o mouse */
+}
+
+
 .skills-container {
     padding: 50px;
     background-color: #f5f5f5;
@@ -486,9 +805,111 @@ header.scrolled {
         border-radius: 10px; /* Bordas arredondadas */
     }
 }
-@media screen and (max-width: 768px) { 
+
+/* Para garantir melhor espaçamento e alinhamento no mobile */
+@media screen and (max-width: 768px) {  
+    .language-selector {
+        display: flex; /* Use flexbox para um melhor controle de alinhamento */
+        justify-content: flex-end; /* Alinha o seletor à direita (ou use 'center' para centralizar) */
+        align-items: center; /* Alinha verticalmente ao centro */
+        margin: 10px; /* Espaçamento ao redor do seletor */
+    } 
+
+    .logo { 
+        margin-left: -5%;
+    }
+    .container-text { 
+        margin-left: -16%;
+        padding: 10px 5px; /* Mantém o padding reduzido */
+    }
+    .text h3 { 
+        font-size: medium;
+    }
+    .text h1 {
+        font-size: 23px; /* Mantém o tamanho original da fonte */
+        line-height: 1.5; /* Aumenta a altura da linha para adicionar mais espaço vertical */
+    }
+    
+    .text p {
+        font-size: 14px; /* Mantém o tamanho do parágrafo */
+        line-height: 1.6; /* Aumenta a altura da linha para os parágrafos */
+        margin-bottom: 10px; /* Margem inferior reduzida */
+    }
+    
+
+    .btn-3 {
+        width: 130px; /* Reduz a largura do botão */
+        height: 40px;
+        font-size: small;
+    }
+
+    
+    .squares-container {
+        position: relative; /* Para o posicionamento relativo do contêiner */
+        display: flex; /* Usar flex para organizar os quadrados */
+        flex-wrap: wrap; /* Permite que os quadrados se movam para a próxima linha, se necessário */
+        justify-content: flex-end; /* Alinha os quadrados à direita */
+        gap: 30px; /* Aumenta o espaço entre os quadrados */
+        margin-top: 70px; /* Espaço acima dos quadrados */
+        padding-right: 30px; /* Espaço à direita do contêiner */
+    }
+    
+    .square {
+        background-color: rgba(2, 126, 251, 0.6); /* Azul com um pouco de transparência */
+        opacity: 0.7; /* Opacidade dos quadrados */
+        animation: float 3s infinite ease-in-out; /* Animação de flutuação mais rápida */
+    }
+    
+    /* Animação para os quadrados */
+    @keyframes float {
+        0% {
+            transform: translateY(0) rotate(0deg); /* Começa na posição original e sem rotação */
+        }
+        50% {
+            transform: translateY(-30px) rotate(10deg); /* Move para cima e adiciona rotação */
+        }
+        100% {
+            transform: translateY(0) rotate(0deg); /* Volta para a posição original */
+        }
+    }
+    
+    /* Criação de quadrados em posições específicas */
+    .square { 
+        width: 40px; /* Tamanho padrão */
+        height: 40px; /* Tamanho padrão */
+    } 
+    
+    .square:nth-child(1) { 
+        margin-top: -80%; 
+        margin-left: 50%;
+    }
+    
+    .square:nth-child(2) { 
+        margin-top: -40%; 
+        margin-left: 70%;
+        width: 60px; /* Largura do segundo quadrado */
+        height: 60px; /* Altura do segundo quadrado */
+    }
+    
+    .square:nth-child(3) { 
+        margin-top: -50%;
+        width: 30px; /* Largura do terceiro quadrado */
+        height: 30px; /* Altura do terceiro quadrado */
+    }
+    
+    .square:nth-child(4) { 
+        margin-top: -20%;
+        width: 40px; /* Largura do quarto quadrado */
+        height: 40px; /* Altura do quarto quadrado */
+    }
+    
+    .square:nth-child(5) { 
+        margin-top: -30%;
+        width: 60px; /* Largura do quinto quadrado */
+        height: 60px; /* Altura do quinto quadrado */
+    }
     .container-text {
-        padding: 150px 0 0 90px; 
+        padding: 100px 0 0 70px; 
         
     }
     
@@ -618,9 +1039,8 @@ header.scrolled {
     
     .section-about h2 {
         font-size: 28px;
-        color: rgba(2,126,251,1);
         margin-bottom: 20px;
-        text-align: center; /* Centraliza o texto */
+        
     }
     
     .section-about p {
@@ -643,5 +1063,4 @@ header.scrolled {
         width: 100%; /* Ocupa toda a largura disponível */
         max-width: none; /* Remove a largura máxima */
         margin-bottom: 20px; /* Espaçamento inferior entre os projetos */
-    }
-}
+    } }
