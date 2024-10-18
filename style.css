@@ -19,7 +19,7 @@ body {
     justify-content: flex-start; /* Alinha o seletor à esquerda */
     align-items: center; /* Alinha verticalmente ao centro */
     margin-top: 0%; /* Define a margem superior para descer a altura */
-    margin-left: 87%; /* Adiciona uma margem à esquerda para mover mais para a esquerda */
+    margin-left: 83%; /* Adiciona uma margem à esquerda para mover mais para a esquerda */
 }
 
 
@@ -112,8 +112,6 @@ body {
     height: 60px; /* Altura do quinto quadrado */
 }
 
-/* Os estilos existentes permanecem sem alteração */
-
 header {
     position: fixed;
     top: 0;
@@ -152,7 +150,7 @@ header.scrolled {
 }
 
 .logo { 
-    margin-left: 13%;
+    margin-left: 5%;
     height: 50px; /* Aumentando um pouco a altura para destacar */
     background: transparent;
     display: inline-flex;
@@ -413,7 +411,7 @@ header.scrolled {
   padding: 50px;
   margin-top: 45vh; /* Adiciona um espaçamento superior */
   /* O margin-top pode ser ajustado conforme necessário para mover a seção mais para baixo */
-  margin-left: 20vh; 
+  margin-left: 10vh; 
 }
 
 .section-about {
@@ -791,6 +789,27 @@ header.scrolled {
         object-fit: cover; /* Garante que a imagem seja cortada */
         border-radius: 10px; /* Bordas arredondadas */
       }
+}  
+@media screen and (max-width: 1263px) {  
+    .cabecalho-link {
+    display: flex;
+    gap: 1rem; /* Reduzi o espaçamento entre os itens */
+    font-weight: 300;
+    cursor: pointer; 
+    padding-top: 0.5%;
+}
+
+.cabecalho-link a {
+    color: rgb(0, 0, 0);
+    font-size: 18px; /* Reduzi o tamanho da fonte */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.cabecalho-link a:hover {
+    color: rgb(0, 128, 255);
+}
+
 } 
 @media screen and (max-width: 1086px) { 
     .image-container {
